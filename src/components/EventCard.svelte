@@ -44,7 +44,7 @@
       "dark:bg-yellow-500 dark:bg-opacity-20 dark:border-yellow-700 dark:border-opacity-40 border-yellow-300 bg-yellow-100 hover:bg-yellow-200 dark:hover:bg-opacity-30") ||
     (color === "green" &&
       "dark:bg-green-700 dark:bg-opacity-20 dark:border-green-700 dark:border-opacity-40 border-green-300 bg-green-100 hover:bg-green-200 dark:hover:bg-opacity-30")
-  } relative rounded-md border transition group border-neutral-200 dark:border-neutral-700 dark:hover:bg-neutral-800 hover:bg-neutral-50`}
+  } relative rounded-md border transition group`}
 >
   <button
     on:click={handleClick}
