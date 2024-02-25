@@ -6,12 +6,14 @@ export const POST: APIRoute = async ({ request }) => {
 
     const title = body.get("title")?.toString()!;
     const date = body.get("date")?.toString()!;
+    const color = body.get("color")?.toString()!;
     const id = new Date().getTime();
 
     const event = {
       id: id,
       title: title,
       date: date,
+      color: color,
       url: `/countdown?title=${title}&date=${date}`,
     };
 

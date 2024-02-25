@@ -81,6 +81,23 @@
             class="text-sm border border-neutral-200 dark:border-neutral-700 dark:bg-secondary px-2 py-2 rounded outline-none"
           />
         </div>
+        <div class="flex flex-col">
+          <label for="color" class="text-xs opacity-90">Color</label>
+          <select
+            required
+            name="color"
+            id="color"
+            class="text-sm border border-neutral-200 dark:border-neutral-700 dark:bg-secondary px-2 py-2 rounded outline-none"
+          >
+            <option value="default">-- Default --</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="pink">Pink</option>
+            <option value="yellow">Yellow</option>
+          </select>
+        </div>
         <button
           type="submit"
           class="bg-primary text-secondary py-2 px-3 rounded-md"

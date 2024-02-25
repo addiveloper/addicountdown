@@ -5,6 +5,7 @@
   export let url = "";
   export let title = "";
   export let date = "";
+  export let color = "";
 
   let isMenuOpen = false;
 
@@ -23,14 +24,31 @@
     month: "long",
     day: "2-digit",
   });
+
+  console.log(color);
 </script>
 
 <article
-  class="flex relative rounded-md border border-neutral-200 dark:border-neutral-700 dark:hover:bg-neutral-800 hover:bg-neutral-50 transition group"
+  class={`flex ${
+    (color === "default" &&
+      "border-neutral-200 dark:border-neutral-700 dark:hover:bg-neutral-800 hover:bg-neutral-50") ||
+    (color === "red" &&
+      "dark:bg-red-500 dark:bg-opacity-20 dark:border-red-700 dark:border-opacity-40 border-red-300 bg-red-100 hover:bg-red-200 dark:hover:bg-opacity-30") ||
+    (color === "blue" &&
+      "dark:bg-blue-500 dark:bg-opacity-20 dark:border-blue-700 dark:border-opacity-40 border-blue-300 bg-blue-100 hover:bg-blue-200 dark:hover:bg-opacity-30") ||
+    (color === "purple" &&
+      "dark:bg-purple-500 dark:bg-opacity-20 dark:border-purple-700 dark:border-opacity-40 border-purple-300 bg-purple-100 hover:bg-purple-200 dark:hover:bg-opacity-30") ||
+    (color === "pink" &&
+      "dark:bg-pink-500 dark:bg-opacity-20 dark:border-pink-700 dark:border-opacity-40 border-pink-300 bg-pink-100 hover:bg-pink-200 dark:hover:bg-opacity-30") ||
+    (color === "yellow" &&
+      "dark:bg-yellow-500 dark:bg-opacity-20 dark:border-yellow-700 dark:border-opacity-40 border-yellow-300 bg-yellow-100 hover:bg-yellow-200 dark:hover:bg-opacity-30") ||
+    (color === "green" &&
+      "dark:bg-green-700 dark:bg-opacity-20 dark:border-green-700 dark:border-opacity-40 border-green-300 bg-green-100 hover:bg-green-200 dark:hover:bg-opacity-30")
+  } relative rounded-md border transition group`}
 >
   <button
     on:click={handleClick}
-    class="absolute flex justify-center items-center p-1 right-1 top-1 md:opacity-0 md:group-hover:opacity-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition rounded-md cursor-pointer"
+    class="absolute flex justify-center items-center p-1 right-1 top-1 md:opacity-0 md:group-hover:opacity-100 hover:bg-black/10 dark:hover:bg-white/10 transition rounded-md cursor-pointer"
   >
     <slot />
   </button>

@@ -11,6 +11,7 @@
       url={event.url}
       title={event.title}
       date={event.date}
+      color={event.color}
     >
       <slot />
       <slot name="trash" slot="trash" />
