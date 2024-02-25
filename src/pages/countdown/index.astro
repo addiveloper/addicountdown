@@ -1,9 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../sections/Header.astro";
-import Countdown from "../../sections/Countdown.astro";
+import Countdown from "../../sections/Countdown.svelte";
 
 const search = Astro.url.search;
+
+const searchParams = new URLSearchParams(search);
+const dateParams = searchParams.get("date");
+const title = searchParams.get("title");
 ---
 
 <Layout title="AddiCountdown | Count the days to...">
@@ -11,6 +15,6 @@ const search = Astro.url.search;
   <main
     class="min-h-screen w-full flex justify-center items-center animate-fade-in"
   >
-    <Countdown search={search} />
+    <Countdown title={title!} dateParams={dateParams!} client:only />
   </main>
 </Layout>
