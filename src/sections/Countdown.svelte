@@ -25,6 +25,10 @@
       const now = Date.now();
       const diff = date - now;
 
+      if (diff <= 0) {
+        return;
+      }
+
       days = formatTime(diff / DAY);
       hours = formatTime((diff % DAY) / HOUR);
       minutes = formatTime((diff % HOUR) / MINUTE);
