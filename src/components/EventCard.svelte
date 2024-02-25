@@ -18,11 +18,14 @@
     location.reload();
   };
 
-  const formatDate = new Date(date).toLocaleDateString("en-EN", {
+  const formatDate = new Date(date);
+
+  /* .toLocaleDateString("en-EN", {
     year: "numeric",
     month: "long",
     day: "2-digit",
   });
+  */
 </script>
 
 <article
