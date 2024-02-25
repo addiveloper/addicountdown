@@ -1,0 +1,16 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../sections/Header.astro";
+import Countdown from "../../sections/Countdown.astro";
+
+const search = Astro.url.search;
+---
+
+<Layout title="AddiCountdown | Count the days to...">
+  <Header />
+  <main
+    class="min-h-screen w-full flex justify-center items-center animate-fade-in"
+  >
+    <Countdown search={search} />
+  </main>
+</Layout>

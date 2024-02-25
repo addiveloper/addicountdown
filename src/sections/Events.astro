@@ -1,0 +1,22 @@
+---
+import EventGrid from "@/components/EventsGrid.svelte";
+import AddEventCard from "@/components/AddEventCard.svelte";
+import PlusIcon from "@/icons/plus.astro";
+import MoreIcon from "@/icons/more.astro";
+import CloseIcon from "@/icons/close.astro";
+import TrashIcon from "@/icons/trash.astro";
+---
+
+<section class="mt-16 flex flex-col w-full gap-8 animate-fade-in">
+  <h1 class="text-4xl font-bold opacity-80">Events</h1>
+  <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+    <AddEventCard client:only>
+      <PlusIcon slot="plus" class="text-neutral-400" />
+      <CloseIcon slot="close" class="opacity-50" />
+    </AddEventCard>
+    <EventGrid client:only>
+      <MoreIcon class="opacity-80 w-5 h-5" />
+      <TrashIcon slot="trash" class="w-4 h-4 opacity-80" />
+    </EventGrid>
+  </div>
+</section>

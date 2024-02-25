@@ -1,0 +1,16 @@
+---
+import ThemeToggle from "@/components/ThemeToggle.astro";
+---
+
+<header
+  class="bg-secondary h-16 fixed w-full top-0 border-b border-neutral-300 dark:border-neutral-700 px-4 md:px-8 flex justify-between items-center animate-fade-in"
+>
+  <a href="/" class="font-bold text-lg opacity-80 hover:opacity-70 transition"
+    >AddiCountdown</a
+  >
+  <div class="flex justify-center items-center gap-8">
+    <button>
+      <ThemeToggle />
+    </button>
+  </div>
+</header>
